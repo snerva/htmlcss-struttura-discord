@@ -30,13 +30,9 @@
 }
 
 .clearfix::after{
-    content: '';
+    content: "";
     display: table;
     clear: both;
-}
-
-[class^="col-"]{
-    padding: 0 1rem;
 }
 
 /*#region header*/
@@ -125,42 +121,58 @@ a{
 /*region footer*/
 footer{
     background-color: darkslategrey;
+    padding-top: 0.5rem;
 }
 
-footer .col-2{
+footer .col-3{
     background-color: var(--dis-footer-col1);
 }
 
-footer .col-10{
+footer .col-9{
     background-color: var(--dis-footer-col2);
 }
 
-.footer1{
+.footer1,
+.footer2{
     height: 600px;
 }
 
 .footer2{
+    display: flex;
+
+}
+
+hr{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer3{
     height: 5rem;
     background-color: var(--dis-footer-bck);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-button{
+span{
     background-color: lightgrey;
     border-style: dashed;
     width: 4rem;
-    height: 2rem;
+    height: 1.5rem;
+    text-align: center;
 }
 
-.bottone{
-    float: right;
-}
+
 /*endregion footer*/
 
 .col-2{
     width: calc((100% / 12)*2);
 }
 
+.col-3{
+    width: calc((100% / 12)*3);
+}
 .col-5{
     width: calc((100% / 12)*5);
 }
@@ -173,16 +185,25 @@ button{
     width: calc((100% / 12)*8);
 }
 
-.col-10{
-    width: calc((100% / 12)*10);
+.col-9{
+    width: calc((100% / 12)*9);
+}
+
+.col{
+    width: calc(100% / 4);
 }
 
 .debug [class^="col-"]{
     border: 1px solid black;
     border-style: dashed;
-    padding: 0.5rem;
 }
 
+.debug .col-9,
+.debug .col{
+    border: 1px solid white;
+    border-style: dashed;
+
+}
 .debug .banner-info,
 .debug .green{
     border: 1px solid black;
