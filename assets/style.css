@@ -120,10 +120,42 @@ a{
     height: 600px;
     background-color: var(--dis-bck-section);
 }
-
-
-
 /*endregion main*/
+
+/*region footer*/
+footer{
+    background-color: darkslategrey;
+}
+
+footer .col-2{
+    background-color: var(--dis-footer-col1);
+}
+
+footer .col-10{
+    background-color: var(--dis-footer-col2);
+}
+
+.footer1{
+    height: 600px;
+}
+
+.footer2{
+    height: 5rem;
+    background-color: var(--dis-footer-bck);
+    display: flex;
+}
+
+button{
+    background-color: lightgrey;
+    border-style: dashed;
+    width: 4rem;
+    height: 2rem;
+}
+
+.bottone{
+    float: right;
+}
+/*endregion footer*/
 
 .col-2{
     width: calc((100% / 12)*2);
@@ -139,6 +171,10 @@ a{
 
 .col-8{
     width: calc((100% / 12)*8);
+}
+
+.col-10{
+    width: calc((100% / 12)*10);
 }
 
 .debug [class^="col-"]{
