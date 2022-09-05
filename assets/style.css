@@ -24,6 +24,21 @@
     margin: auto;
 }
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+[class^="col-"]{
+    padding: 0 1rem;
+}
+
 /*#region header*/
 header{
     background-color: var(--dis-bck-banner);
@@ -72,15 +87,50 @@ a{
     height: 400px;
 }
 
+.content{
+    background-color: white;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.content .row{
+    height: 500px;
+}
+
+.col-7{
+    background-color: var(--dis-col-img);
+}
+
+.col-5{
+    background-color: var(--dis-col-text);
+}
+
+.grey{
+    background-color: lightgrey;
+}
+
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
 
 
 /*endregion main*/
-.row{
-    display: flex;
-}
 
 .col-2{
     width: calc((100% / 12)*2);
+}
+
+.col-5{
+    width: calc((100% / 12)*5);
+}
+
+.col-7{
+    width: calc((100% / 12)*7);
 }
 
 .col-8{
@@ -93,7 +143,7 @@ a{
     padding: 0.5rem;
 }
 
-.debug section{
+.debug .banner-info{
     border: 1px solid black;
     border-style: dashed;
     padding: 0.5rem;
