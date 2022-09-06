@@ -35,34 +35,34 @@
     clear: both;
 }
 
+
 /*#region header*/
 header{
     background-color: var(--dis-bck-banner);
     height: 50px;
-    display: flex;
-    align-items: center;
-    
-}
 
-header .container{
-    background-color: var(--dis-bck-header);
-}
-
-header nav{
-    text-align: center;
-    
 }
 
 a{
     text-decoration: none;
 }
 
-.login{
-    text-align: right;
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+
+header .login .logo{
+    flex-grow: 1;
+}
+
+header .menu{
+    flex-grow: 2;
+    text-align: center;
 }
 /*#endregion header*/
 
-/*region main*/
+/*#region main*/
 .banner{
     background-color: var(--dis-bck-jumbo);
     display: flex;
@@ -81,20 +81,16 @@ a{
     height: 400px;
 }
 
-.content{
-    display: flex;
-    align-items: center;
-}
 
 .content .row{
     height: 500px;
 }
 
-.col-7{
+.col-8{
     background-color: var(--dis-col-img);
 }
 
-.col-5{
+.col-4{
     background-color: var(--dis-col-text);
 }
 
@@ -110,15 +106,15 @@ a{
 .big-section,
 .content,
 .banner{
-    padding: 3rem 0;
+    padding: 2rem 0;
 }
-.green{
+.contents{
     height: 600px;
     background-color: var(--dis-bck-section);
 }
-/*endregion main*/
+/*#endregion main*/
 
-/*region footer*/
+/*#region footer*/
 footer{
     background-color: darkslategrey;
     padding-top: 0.5rem;
@@ -155,7 +151,8 @@ hr{
     justify-content: space-between;
 }
 
-span{
+.logo-footer,
+.bottone{
     background-color: lightgrey;
     border-style: dashed;
     width: 4rem;
@@ -164,21 +161,13 @@ span{
 }
 
 
-/*endregion footer*/
-
-.col-2{
-    width: calc((100% / 12)*2);
-}
+/*#endregion footer*/
 
 .col-3{
     width: calc((100% / 12)*3);
 }
-.col-5{
-    width: calc((100% / 12)*5);
-}
-
-.col-7{
-    width: calc((100% / 12)*7);
+.col-4{
+    width: calc((100% / 12)*4);
 }
 
 .col-8{
@@ -198,8 +187,22 @@ span{
     border-style: dashed;
 }
 
-.debug .col-9,
-.debug .col{
+.debug nav{
+    background-color: var(--dis-bck-banner);
+    height: 50px;
+}
+
+.debug .logo,
+.debug .menu,
+.debug .login{
+    background-color: var(--dis-bck-header);
+    border: 1px solid black;
+    border-style: dashed;
+    height: 50px;
+}
+
+.footer2 .col-3{
+    background-color: var(--dis-footer-col2);
     border: 1px solid white;
     border-style: dashed;
 
